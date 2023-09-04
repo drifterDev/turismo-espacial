@@ -1,3 +1,9 @@
+// Autor: Mateo Álvarez Murillo
+// Fecha de creación: 2023
+
+// Este código se proporciona bajo la Licencia MIT.
+// Para más información, consulta el archivo LICENSE en la raíz del repositorio.
+
 "use strict";
 
 const radios = document.getElementsByName("destination");
@@ -33,7 +39,7 @@ async function cambiarInfo(value) {
 
 async function getInfo(value) {
   try {
-    const response = await fetch("js/data.json");
+    const response = await fetch("./js/data.json");
     if (!response.ok) {
       throw new Error(
         "Error en la petición. Código de estado: " + response.status
