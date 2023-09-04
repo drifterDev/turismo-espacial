@@ -1,38 +1,45 @@
-**To do this challenge, you need a strong understanding of HTML, CSS, and JavaScript.**
+# Página de Turismo Espacial
 
-## The challenge
+Este proyecto recrea una página web de turismo espacial, en la cual se presenta los destinos disponibles, la tripulación que acompañara a los turistas y la tecnología utilizada para el viaje.
 
-Your challenge is to build out this multi-page space tourism website and get it looking as close to the design as possible.
+El proyecto está hecho con TailwindCSS para la maquetación y JavaScript para la interactividad.
 
-**This project is a collaboration between us, Scrimba, and Kevin Powell. If you'd like to see how Kevin would tackle the project, you can [follow along on Scrimba's free course](https://scrimba.com/learn/spacetravel).**
+<img src="./src/assets/preview.jpg">
 
-If you're working through it yourself, please use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+## Requisitos previos
 
-If you choose to use a JS-heavy approach, we provide a local `data.json` file for the different page data. This means you'll be able to pull the data from there instead of using the separate `.html` files.
+Antes de comenzar, asegúrate de tener instalado `npm` en tu sistema. Si no lo tienes instalado, puedes descargarlo e instalarlo desde [el sitio web oficial de Node.js](https://nodejs.org/).
 
-Your users should be able to:
+## Instalación
 
-- View the optimal layout for each of the website's pages depending on their device's screen size
-- See hover states for all interactive elements on the page
-- View each page and be able to toggle between the tabs to see new information
+1. Clona este repositorio en tu máquina local o descargar la carpeta comprimida del proyecto:
 
-Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
+   ```bash
+   git clone https://github.com/drifterDev/turismo-espacial.git
+2. Descargar las dependencias nesesarias del proyecto:
 
-## Where to find everything
+   ```bash
+   npm install
+3. Correr el comando para generar el CSS debido al framework TailwindCSS:
 
-Your task is to build out the project to the design file provided. We provide both Sketch and Figma versions of the design, so you can choose which tool you prefer to use. You can download the design file on the platform. The design download comes with a `README.md` file as well to help you get set up.
+   ```bash
+   npm run build
+4. El archivo principal o punto de entrada es home.html, pero se puede acceder mediante los demas archivos .html.
 
-All the required assets for this project are in the `/assets` folder. The assets are already exported for the correct screen size and optimized. Some images are reusable at multiple screen sizes.
+5. Abrir un servidor local o utilizar la extensión Live Server. Debido a que dentro del proyecto se utiliza async-await en archivos locales y esto es bloqueado por los navegadores.
 
-The design system in the design file will give you more information about the various colors, fonts, and styles used in this project.
+6. (Si se utiliza Live Server, esto no es nesesario) Instalar http-server
 
-## Building your project
+   ```bash
+   npm install -g http-server
+7. Ir a la carpeta src/ y dentro de esta ejecutar lo siguiente
+   ```bash
+   http-server -p 8080 -o /home.html
+8. Al hacer esto se debería abrir automaticamente en el navegador el servidor con la pagina web ya cargada y si no, entonces fijarse en la siguiente salida.
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
-
-1. Separate the `starter-code` from the rest of this project and rename it to something meaningful for you. Initialize the codebase as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+   ```bash
+   Starting up http-server, serving ./
+   Available on:
+    http://127.0.0.1:8080
+    http://192.168.1.100:8080
+9. Abrir el navegador de preferencia e ir a cualquiera de las direcciones que fueron proporcionadas.
