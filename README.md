@@ -43,3 +43,11 @@ Antes de comenzar, asegúrate de tener instalado `npm` en tu sistema. Si no lo t
     http://127.0.0.1:8080
     http://192.168.1.100:8080
 9. Abrir el navegador de preferencia e ir a cualquiera de las direcciones que fueron proporcionadas.
+
+## Contribuciones
+
+Aprecio cualquier sugerencia para mejorar el contenido de este proyecto. Si deseas contribuir, por favor crea un "issue" en el repositorio o contáctame directamente. Valoraré tus aportes para mejorar este repositorio.
+
+## Licencia
+
+Los códigos incluidos en este proyecto están bajo la Licencia MIT. Para obtener más información, consulta el archivo "LICENSE" en la raíz del repositorio.
