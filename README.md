@@ -48,6 +48,10 @@ Antes de comenzar, asegúrate de tener instalado `npm` en tu sistema. Si no lo t
 
 Aprecio cualquier sugerencia para mejorar el contenido de este proyecto. Si deseas contribuir, por favor crea un "issue" en el repositorio o contáctame directamente. Valoraré tus aportes para mejorar este repositorio.
 
+<<<<<<< HEAD
 ## Licencia 
+=======
+## Licencia
+>>>>>>> 263d0ae9c79f1ae1620b4aa6abb8fc38cab08c58
 
 Los códigos incluidos en este proyecto están bajo la Licencia MIT. Para obtener más información, consulta el archivo "LICENSE" en la raíz del repositorio.
