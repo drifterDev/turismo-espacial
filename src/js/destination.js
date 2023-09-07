@@ -20,11 +20,11 @@ logo.addEventListener("click", () => {
 
 radios.forEach((radio) => {
   radio.addEventListener("change", () => {
-    cambiarInfo(radio.value);
+    changeInfo(radio.value);
   });
 });
 
-async function cambiarInfo(value) {
+async function changeInfo(value) {
   try {
     let data = await getInfo(value);
     img.src = data.images.png;
@@ -42,7 +42,7 @@ async function getInfo(value) {
     const response = await fetch("./js/data.json");
     if (!response.ok) {
       throw new Error(
-        "Error en la petición. Código de estado: " + response.status
+        "Error get info: " + response.status
       );
     }
     const data = await response.json();
@@ -53,7 +53,7 @@ async function getInfo(value) {
     );
     return obj;
   } catch (error) {
-    console.error("Error al cargar el archivo JSON:", error);
+    console.error("Error load JSON:", error);
     throw error;
   }
 }
