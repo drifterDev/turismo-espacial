@@ -6,11 +6,12 @@
 
 "use strict";
 
-const role = document.getElementById("role-crew");
-const title = document.getElementById("name-crew");
-const description = document.getElementById("description-crew");
-const img = document.getElementById("imagen-crew");
-const radios = document.getElementsByName("crew");
+const radios = document.getElementsByName("destination");
+const img = document.getElementById("imagen-destination");
+const title = document.getElementById("title");
+const description = document.getElementById("description");
+const distance = document.getElementById("distance");
+const travel = document.getElementById("travel");
 const logo = document.getElementById("logo");
 
 logo.addEventListener("click", () => {
@@ -26,10 +27,11 @@ radios.forEach((radio) => {
 async function changeInfo(value) {
   try {
     let data = await getInfo(value);
-    role.textContent = data.role;
-    title.textContent = value;
-    description.textContent = data.bio;
     img.src = data.images.png;
+    title.textContent = value;
+    description.textContent = data.description;
+    distance.textContent = data.distance;
+    travel.textContent = data.travel;
   } catch (err) {
     console.error("Error: " + err);
   }
@@ -37,14 +39,18 @@ async function changeInfo(value) {
 
 async function getInfo(value) {
   try {
-    const response = await fetch("js/data.json");
+    const response = await fetch("../js/data.json");
     if (!response.ok) {
       throw new Error(
         "Error get info: " + response.status
       );
     }
     const data = await response.json();
-    let obj = await data.crew.find((objeto) => objeto.name === value);
+    let obj = await data.destinations.find(
+      (objeto) =>
+        objeto.name ===
+        value.charAt(0).toLocaleUpperCase() + value.slice(1).toLocaleLowerCase()
+    );
     return obj;
   } catch (error) {
     console.error("Error load JSON:", error);

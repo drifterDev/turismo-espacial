@@ -24,7 +24,7 @@ Antes de comenzar, asegúrate de tener instalado `npm` en tu sistema. Si no lo t
 
    ```bash
    npm run build
-4. El archivo principal o punto de entrada es home.html, pero se puede acceder mediante los demas archivos .html.
+4. El archivo principal o punto de entrada esta en pages/home.html, pero se puede acceder mediante los demas archivos pages/*.html.
 
 5. Abrir un servidor local o utilizar la extensión Live Server. Debido a que dentro del proyecto se utiliza async-await en archivos locales y esto es bloqueado por los navegadores.
 
@@ -32,9 +32,9 @@ Antes de comenzar, asegúrate de tener instalado `npm` en tu sistema. Si no lo t
 
    ```bash
    npm install -g http-server
-7. Ir a la carpeta src/ y dentro de esta ejecutar lo siguiente
+7. Ir a la raíz del proyecto y dentro ejecutar lo siguiente
    ```bash
-   http-server -p 8080 -o /home.html
+   http-server -p 8080 -o pages/home.html
 8. Al hacer esto se debería abrir automaticamente en el navegador el servidor con la pagina web ya cargada y si no, entonces fijarse en la siguiente salida.
 
    ```bash

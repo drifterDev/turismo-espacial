@@ -43,7 +43,7 @@ async function changeInfo(value) {
 
 async function getInfo(value) {
   try {
-    const response = await fetch("js/data.json");
+    const response = await fetch("../js/data.json");
     if (!response.ok) {
       throw new Error(
         "Error get Info: " + response.status
