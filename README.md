@@ -4,7 +4,7 @@ La idea de este proyecto fue brindada por [Frontend Mentor](https://www.frontend
 
 El proyecto está hecho con TailwindCSS para la maquetación y JavaScript para la interactividad.
 
-<img src="./src/assets/preview.jpg">
+<img src="./assets/preview.jpg">
 
 ## Requisitos previos
 
