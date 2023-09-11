@@ -11,6 +11,7 @@ const description = document.getElementById("description-tecno");
 const img = document.getElementById("imagen-tecno");
 const radios = document.getElementsByName("tecno");
 const logo = document.getElementById("logo");
+let radioActual=0;
 
 logo.addEventListener("click", () => {
   window.location.href = "home.html";
@@ -18,24 +19,28 @@ logo.addEventListener("click", () => {
 
 window.addEventListener("load", () => {
   img.src =
-    window.innerWidth > 800
-      ? "./assets/technology/image-launch-vehicle-portrait.jpg"
-      : "./assets/technology/image-launch-vehicle-landscape.jpg";
+    window.innerWidth > 1024
+      ? "../assets/technology/image-launch-vehicle-portrait.jpg"
+      : "../assets/technology/image-launch-vehicle-landscape.jpg";
 });
 
-radios.forEach((radio) => {
+radios.forEach((radio, index) => {
   radio.addEventListener("change", () => {
-    changeInfo(radio.value);
+    changeInfo(radio.value, index);
   });
 });
 
-async function changeInfo(value) {
+window.addEventListener("resize", () => {
+  changeInfo(radios[radioActual].value, radioActual);
+});
+
+async function changeInfo(value, index) {
   try {
     let data = await getInfo(value);
     title.textContent = value;
     description.textContent = data.description;
-    img.src =
-      window.innerWidth > 800 ? data.images.portrait : data.images.landscape;
+    img.src = window.innerWidth > 1024 ? data.images.portrait : data.images.landscape;
+    radioActual=index;
   } catch (err) {
     console.error("Error: " + err);
   }
