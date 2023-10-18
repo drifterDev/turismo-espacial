@@ -4,7 +4,7 @@ La idea de este proyecto fue brindada por [Frontend Mentor](https://www.frontend
 
 ## Vistazo rápido
 
-<img src="./assets/preview.jpg">
+![Vista previa 1](assets/preview.png)
 
 
 ## Comenzando 
@@ -62,6 +62,12 @@ Antes de comenzar, asegúrate de tener instalado `npm` en tu sistema. Si no lo t
 
 * [Tailwind](https://tailwindcss.com/) - El framework CSS utilizado
 * [JavaScript](https://developer.mozilla.org/es/docs/Web/JavaScript) - El lenguaje de programación utilizado
+
+## Más vistas previas
+
+![Vista previa 2](assets/preview2.png)
+
+![Vista previa 3](assets/preview3.png)
 
 ## Contribuyendo 
 
