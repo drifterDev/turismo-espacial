@@ -11,7 +11,7 @@ const description = document.getElementById("description-tecno");
 const img = document.getElementById("imagen-tecno");
 const radios = document.getElementsByName("tecno");
 const logo = document.getElementById("logo");
-let radioActual=0;
+let radioActual = 0;
 
 logo.addEventListener("click", () => {
   window.location.href = "home.html";
@@ -39,8 +39,9 @@ async function changeInfo(value, index) {
     let data = await getInfo(value);
     title.textContent = value;
     description.textContent = data.description;
-    img.src = window.innerWidth > 1024 ? data.images.portrait : data.images.landscape;
-    radioActual=index;
+    img.src =
+      window.innerWidth > 1024 ? data.images.portrait : data.images.landscape;
+    radioActual = index;
   } catch (err) {
     console.error("Error: " + err);
   }
@@ -50,9 +51,7 @@ async function getInfo(value) {
   try {
     const response = await fetch("../js/data.json");
     if (!response.ok) {
-      throw new Error(
-        "Error get Info: " + response.status
-      );
+      throw new Error("Error get Info: " + response.status);
     }
     const data = await response.json();
     let obj = await data.technology.find((objeto) => objeto.name === value);

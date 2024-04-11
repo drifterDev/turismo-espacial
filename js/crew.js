@@ -39,9 +39,7 @@ async function getInfo(value) {
   try {
     const response = await fetch("../js/data.json");
     if (!response.ok) {
-      throw new Error(
-        "Error get info: " + response.status
-      );
+      throw new Error("Error get info: " + response.status);
     }
     const data = await response.json();
     let obj = await data.crew.find((objeto) => objeto.name === value);
